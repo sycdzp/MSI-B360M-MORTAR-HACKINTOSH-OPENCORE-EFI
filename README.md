@@ -55,8 +55,8 @@
 
 ## 更新记录
 #### 2020.02.10
-修复 OpenCore 0.5.5 正式版将 PlatformInfo > Generic > SupportCsm 改名为 AdviseWindows，忘记更改配置文件的问题。
-*请手动更改名称，并按照官方示例文件调整顺序至 Generic 下第一位。
+修复 OpenCore 0.5.5 正式版将 PlatformInfo > Generic > SupportCsm 改名为 AdviseWindows，忘记更改配置文件的问题。<br>
+*请手动更改名称，并按照官方示例文件调整顺序至 Generic 下第一位。*
 
 #### 2020.02.05
 设置 TakeoffDelay 参数为 200 (Misc > Boot，单位：毫秒) 以支持引导过程的原生快捷键。<br>
@@ -167,7 +167,7 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 
 ### 进阶使用
 1. 参考 [xjn 博客](https://blog.xjn819.com/?p=543) 的进阶部分「4.1 CPU 的变频优化」或 xjn 大佬发表于 PCBETA 的帖子 [FCPX 核显独显全程满速指南](http://bbs.pcbeta.com/viewthread-1836920-1-1.html) 中「HWP 变频」部分，根据个人需求定制`CPUFriendDataProvider.kext`HWP 变频文件，放入`/EFI/OC/Kexts/`替换同名文件，重新启用`/EFI/OC/config.plist`文件 Kernel > Add > 10 和 11。<br>
-*iMac19,2 和 iMacPro1,1 均不支持 HWP 变频，无需尝试，对于有核显的用户建议选择 iMac19,1 机型，对于只使用核显的用户推荐 Macmini8,1 机型。*
+*iMac19,2 和 iMacPro1,1 均不支持 HWP 变频，无需尝试。对于有核显的用户建议选择 iMac19,1 机型，对于只使用核显的用户推荐 Macmini8,1 机型。*
 2. 参考 [黑果小兵博客](https://blog.daliansky.net/Intel-FB-Patcher-USB-Custom-Video.html) 生成`USBPorts.kext`USB 定制文件，放入`/EFI/OC/Kexts/`替换同名文件，打开`/EFI/OC/config.plist`，关闭 Kernel > Add > 7，打开 8。<br>
 *目录内有我的 USB 定制文件，可在备份好 EFI 的情况下尝试使用。*<br>
 ![](https://raw.githubusercontent.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/master/Images/Explain/ProperTree_Kernel_USB.png)
@@ -190,7 +190,7 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 
 ## 结语
 完成以上步骤后，基本上已经有了一个完成度为 99% 的黑苹果设备，更多截图请查看 [截图预览](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/tree/master/Images/Preview.md) 。<br>
-黑果和白果不一样，一旦稳定后，系统等各个方面追新速度不要太快，待各路大佬测试后再升级也不迟。
+黑果和白果不一样，各种补丁和新系统的兼容性可能存在问题，一旦稳定后，追新速度不要太快，待各路大佬测试、完善后再升级也不迟。
 
 ## 鸣谢
 [xjn](https://blog.xjn819.com/)<br>
@@ -201,4 +201,5 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 [osx86zh](https://t.me/osx86zh/) ([Telegram](https://telegram.org/) 讨论组)
 
 ## 写在最后
-作为一个黑果小白，欢迎指正错误及提出建议，我会及时更新此 EFI。另外，如果有在 iOS 使用 Quantumult X 的用户，欢迎使用我的规则 [Stick Rules](https://github.com/GeQ1an/Rules/tree/master)，也欢迎 [点击此处](https://t.me/usestick) 订阅我的 Telegram 频道及时获取规则和 EFI 相关信息。
+作为一个黑果小白，欢迎在 [Issues](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/issues) 或通过 [Telegram](https://t.me/GeQ1an) 联系我，指正错误及提出建议，我将及时修改、更新此 EFI。<br>
+另外，如果有在 iOS 使用 Quantumult X 的用户，欢迎使用我的规则 [Stick Rules](https://github.com/GeQ1an/Rules/tree/master)，也欢迎 [点击此处](https://t.me/usestick) 订阅我的 Telegram 频道及时获取规则和 EFI 相关信息。
