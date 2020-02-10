@@ -92,7 +92,7 @@
 经过三天的测试后，上传第一版。
 
 ## 使用 EFI
-准备 [ProperTree](https://github.com/corpnewt/ProperTree) ([下载](https://blog.xjn819.com/wp-content/uploads/2019/10/ProperTree.zip)) 或 [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) 用来编辑配置文件，请勿使用其他编辑器编辑（切记）。<br>
+准备 [ProperTree](https://github.com/corpnewt/ProperTree) ([下载](https://github.com/GeQ1an/Personal/raw/master/Hackintosh/ProperTree.zip)) 或 [PlistEdit Pro](https://www.fatcatsoftware.com/plisteditpro/) 用来编辑配置文件，请勿使用其他编辑器编辑（切记）。<br>
 OpenCore 拥有高度的可定制化，建议先参考下面的说明使用配置好的基础版本，之后再通过 [xjn 博客](https://blog.xjn819.com/?p=543) 和 [黑果小兵博客](https://blog.daliansky.net/OpenCore-BootLoader.html) 学习更多内容进行修改。
 
 ### BIOS 设置
