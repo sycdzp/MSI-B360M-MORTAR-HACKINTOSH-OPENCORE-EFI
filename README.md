@@ -180,15 +180,15 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
    两种方法选择其一即可，经反复测试，在微星 B360M 迫击炮（钛金版）上我更推荐方法二。<br>
    *如果同时使用方法一和方法二，开机 logo 的显示依旧会不正常。*
 2. **无法正常进入睡眠状态怎么办？**<br>
-   目前所知的情况是 ~~bugOS~~ 10.15.2 存在睡眠相关 bugs，如果使用了最新的 EFI 仍然无法正常进入睡眠，请尝试到「系统偏好设置——安全性与隐私——隐私——定位服务」关闭「Siri 与听写」。
+   目前所知的情况是 ~~bugOS~~macOS 10.15.2 存在睡眠相关 bugs，如果使用了最新的 EFI 仍然无法正常进入睡眠，请尝试到「系统偏好设置——安全性与隐私——隐私——定位服务」关闭「Siri 与听写」。
 3. **为什么推荐拥有核显的 CPU？**<br>
    首先，macOS Catalina 原生支持 4K 双硬解的独显最低为 RX VEGA⁵⁶，而第七代及以后的酷睿处理器核显可以和低于 RX VEGA⁵⁶ 的独显协同工作，完成 4K 双硬解；<br>
    其次，因为黑果没有 T2 芯片，所以没有核显的黑果无法使用随航（Sidecar）功能。
 4. **引导过程触发原生快捷键怎么这么难？**<br>
    我也被这个问题困扰了许久，在 OC 0.5.5 之前尝试过各种配置组合，均无法触发，但 OC 更新 0.5.5 后，通过设置 TakeoffDelay 参数可在引导过程中触发原生快捷键，建议在启动时按住组合键，或键盘灯亮起时不断重按组合键，可自行调整 TakeoffDelay 参数。
-5. **NVMe 硬盘温度过高怎么办？**
-   一般来说读写速度越快的硬盘温度往往越高，待机情况下超过 40℃ 或你认为硬盘的温度不正常，可尝试加载 [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) 解决。
-   将 NVMeFix.kext 放入`/EFI/OC/Kexts/`目录，打开`/EFI/OC/config.plist`，在 Kernel > Add 处添加 NVMeFix.kext（参考其他 kext 
+5. **NVMe 硬盘温度过高怎么办？**<br>
+   一般来说读写速度越快的硬盘温度往往越高，无需太过担心，但待机情况下超过 50℃ 或你认为硬盘的温度不正常，可尝试加载 [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) 解决。<br>
+   将 NVMeFix.kext 放入`/EFI/OC/Kexts/`目录，打开`/EFI/OC/config.plist`，在 Kernel > Add 处添加 NVMeFix.kext（参考其他 kext 的添加方式）。
 6. **待更新**
 
 ## 结语
@@ -203,13 +203,8 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 [cattyhouse](https://github.com/cattyhouse/oc-guide/)<br>
 [osx86zh](https://t.me/osx86zh/) ([Telegram](https://telegram.org/) 讨论组)
 
-## 友情链接
-[OpenCorePkg 官方版本](https://github.com/acidanthera/OpenCorePkg/releases) [OpenCorePkg 自动编译](https://github.com/williambj1/OpenCore-Factory/releases)<br>
-[AppleSupportPkg 官方版本](https://github.com/acidanthera/AppleSupportPkg/releases) [AppleSupportPkg 自动编译](https://github.com/athlonreg/AppleSupportPkg-Factory/releases)<br>
-[WhateverGreen 官方版本](https://github.com/acidanthera/WhateverGreen/releases) [WhateverGreen 魔改版本](https://github.com/bugprogrammer/WhateverGreen)<br>
-[Lilu](https://github.com/acidanthera/Lilu) [MacInfoPkg](https://github.com/acidanthera/MacInfoPkg/releases)<br>
-[VirtualSMC](https://github.com/acidanthera/VirtualSMC)  [AppleALC](https://github.com/acidanthera/AppleALC/releases)  <br>
-[IntelMausi](https://github.com/acidanthera/IntelMausi)  [CPUFriend](https://github.com/acidanthera/CPUFriend)<br>
+## 链接
+[OpenCorePkg 官方版本](https://github.com/acidanthera/OpenCorePkg/releases) / [OpenCorePkg 自动编译](https://github.com/williambj1/OpenCore-Factory/releases) / [AppleSupportPkg 官方版本](https://github.com/acidanthera/AppleSupportPkg/releases) / [AppleSupportPkg 自动编译](https://github.com/athlonreg/AppleSupportPkg-Factory/releases) / [WhateverGreen 官方版本](https://github.com/acidanthera/WhateverGreen/releases) / [WhateverGreen 魔改版本](https://github.com/bugprogrammer/WhateverGreen) / [Lilu](https://github.com/acidanthera/Lilu) / [MacInfoPkg](https://github.com/acidanthera/MacInfoPkg/releases) / [VirtualSMC](https://github.com/acidanthera/VirtualSMC) / [AppleALC](https://github.com/acidanthera/AppleALC/releases) / [IntelMausi](https://github.com/acidanthera/IntelMausi) / [CPUFriend](https://github.com/acidanthera/CPUFriend)
 
 ## 写在最后
 作为一个黑果小白，欢迎在 [Issues](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/issues) 或通过 [Telegram](https://t.me/GeQ1an) 联系我，指正错误及提出建议，我将及时修改、更新此 EFI。<br>
