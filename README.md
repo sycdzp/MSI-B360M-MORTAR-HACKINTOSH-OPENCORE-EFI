@@ -186,7 +186,10 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
    其次，因为黑果没有 T2 芯片，所以没有核显的黑果无法使用随航（Sidecar）功能。
 4. **引导过程触发原生快捷键怎么这么难？**<br>
    我也被这个问题困扰了许久，在 OC 0.5.5 之前尝试过各种配置组合，均无法触发，但 OC 更新 0.5.5 后，通过设置 TakeoffDelay 参数可在引导过程中触发原生快捷键，建议在启动时按住组合键，或键盘灯亮起时不断重按组合键，可自行调整 TakeoffDelay 参数。
-5. **待更新**
+5. **NVMe 硬盘温度过高怎么办？**
+   一般来说读写速度越快的硬盘温度往往越高，待机情况下超过 40℃ 或你认为硬盘的温度不正常，可尝试加载 [NVMeFix](https://github.com/acidanthera/NVMeFix/releases) 解决。
+   将 NVMeFix.kext 放入`/EFI/OC/Kexts/`目录，打开`/EFI/OC/config.plist`，在 Kernel > Add 处添加 NVMeFix.kext（参考其他 kext 
+6. **待更新**
 
 ## 结语
 完成以上步骤后，基本上已经有了一个完成度为 99% 的黑苹果设备，更多截图请查看 [截图预览](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/tree/master/Images/Preview.md) 。<br>
@@ -202,7 +205,11 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 
 ## 友情链接
 [OpenCorePkg 官方版本](https://github.com/acidanthera/OpenCorePkg/releases) [OpenCorePkg 自动编译](https://github.com/williambj1/OpenCore-Factory/releases)<br>
-[AppleSupportPkg 官方版本](https://github.com/acidanthera/AppleSupportPkg/releases) [AppleSupportPkg 
+[AppleSupportPkg 官方版本](https://github.com/acidanthera/AppleSupportPkg/releases) [AppleSupportPkg 自动编译](https://github.com/athlonreg/AppleSupportPkg-Factory/releases)<br>
+[WhateverGreen 官方版本](https://github.com/acidanthera/WhateverGreen/releases) [WhateverGreen 魔改版本](https://github.com/bugprogrammer/WhateverGreen)<br>
+[Lilu](https://github.com/acidanthera/Lilu) [MacInfoPkg](https://github.com/acidanthera/MacInfoPkg/releases)<br>
+[VirtualSMC](https://github.com/acidanthera/VirtualSMC)  [AppleALC](https://github.com/acidanthera/AppleALC/releases)  <br>
+[IntelMausi](https://github.com/acidanthera/IntelMausi)  [CPUFriend](https://github.com/acidanthera/CPUFriend)<br>
 
 ## 写在最后
 作为一个黑果小白，欢迎在 [Issues](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/issues) 或通过 [Telegram](https://t.me/GeQ1an) 联系我，指正错误及提出建议，我将及时修改、更新此 EFI。<br>
