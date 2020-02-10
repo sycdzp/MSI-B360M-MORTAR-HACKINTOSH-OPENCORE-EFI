@@ -55,8 +55,8 @@
 
 ## 更新记录
 #### 2020.02.10
-修复 OpenCore 0.5.5 正式版将 PlatformInfo > Generic > SupportCsm 改名为 AdviseWindows，忘记更改配置文件的问题。<br>
-*请手动更改名称，并按照官方示例文件调整顺序至 Generic 下第一位。*
+修复 OpenCore 0.5.5 正式版将 PlatformInfo > Generic > SupportCsm 改名为 AdviseWindows 忘记更改配置文件的问题。<br>
+*请手动更改该项名称，并建议按照官方示例文件调整 AdviseWindows 顺序至 Generic 下第一位。*
 
 #### 2020.02.05
 设置 TakeoffDelay 参数为 200 (Misc > Boot，单位：毫秒) 以支持引导过程的原生快捷键。<br>
@@ -199,6 +199,10 @@ OC(Overclocking)\CPU 特征\CFG锁定 [禁止]（必须！）<br>
 [tonymoses](http://bbs.pcbeta.com/viewthread-1835637-1-1.html)<br>
 [cattyhouse](https://github.com/cattyhouse/oc-guide/)<br>
 [osx86zh](https://t.me/osx86zh/) ([Telegram](https://telegram.org/) 讨论组)
+
+## 友情链接
+[OpenCorePkg 官方版本](https://github.com/acidanthera/OpenCorePkg/releases) [OpenCorePkg 自动编译](https://github.com/williambj1/OpenCore-Factory/releases)<br>
+[AppleSupportPkg 官方版本](https://github.com/acidanthera/AppleSupportPkg/releases) [AppleSupportPkg 
 
 ## 写在最后
 作为一个黑果小白，欢迎在 [Issues](https://github.com/GeQ1an/MSI-B360M-MORTAR-HACKINTOSH-OPENCORE-EFI/issues) 或通过 [Telegram](https://t.me/GeQ1an) 联系我，指正错误及提出建议，我将及时修改、更新此 EFI。<br>
