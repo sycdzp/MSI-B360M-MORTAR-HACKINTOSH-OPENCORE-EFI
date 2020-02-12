@@ -70,8 +70,10 @@
 #### 2020.02.02
 更新支持读写硬件 NVRAM，不再需要模拟 NVRAM。<br>
 *如之前进行过模拟 NVRAM 操作，请在`终端`执行下面两条命令后，删除`/EFI/nvram.plist`文件。*<br>
-`sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook)`*(删除 LogoutHook.command)*<br>
-`sudo defaults delete com.apple.loginwindow LogoutHook`*(清空 LogoutHook 的触发设置)*
+````
+sudo rm -rf $(sudo defaults read com.apple.loginwindow LogoutHook) //删除 LogoutHook
+sudo defaults delete com.apple.loginwindow LogoutHook  //清空 LogoutHook 的触发设置
+````
 
 #### 2020.01.14
 更新 OpenCore 至 0.5.4 正式版；更新 Lilu / AppleALC / CPUFriend / VitualSMC / WhateverGreen 等 Kexts 至官方最新版。<br>
